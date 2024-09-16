@@ -44,6 +44,7 @@ const HomePage = () => {
       <h2 className="text-3xl font-semibold font-[dosis] text-white mb-12">
         "Be healthy!"
       </h2>
+            
       <div className="grid grid-cols-2 lg:grid-cols-2 gap-4 font-[dosis] z-10">
         {items.map((item, index) => (
           <div 

@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom'
 import Login from '../components/Login.jsx'
 import About from '../components/About.jsx'
 import FAQ from '../components/FAQ.jsx'
+import ChatPage from '../components/Chat.jsx'
+
 
 
 const ProductRoutees = ({ setSerch, serch }) => {
@@ -14,6 +16,9 @@ const ProductRoutees = ({ setSerch, serch }) => {
             <Route path="/homepage" element={<Home />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/about" element={<About />} />
+            <Route path="/chat" element={<ChatPage />} />
+          
+
         </Routes>
 
     )

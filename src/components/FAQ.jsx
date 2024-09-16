@@ -26,6 +26,12 @@ const FAQ = () => {
       <div className="font-bold text-[#FFFFFF] text-[3rem] flex pt-10 items-center justify-center">
         FAQ SECTION
       </div>
+      <img src='tangerine.png' className='h-20 w-20'/>
+        <div className='flex flex-col'>
+        <p className='text-lg float-right'>How is Tangerine healthy?</p>
+        <p className=''>Tangerine are a great health booster due to their
+high vitamin C content, which supports the 
+immune system and skin health. </p>
       <div className="flex justify-center items-center pt-10">
         <input
           type="text"
@@ -56,6 +62,7 @@ const FAQ = () => {
           />
         ))}
       </div>
+    </div>
     </div>
   );
 };
