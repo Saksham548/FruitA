@@ -7,9 +7,9 @@ const HomePage = () => {
 
   const items = [
     { title: "Chat.", path: "/chat", description: "Start a conversation with our AI assistant", bgColor: "bg-[#FFE5C2]" },
+    { title: "About", path: "", description: "Discover additional features", bgColor: "bg-[#E8C8F1]" },
     { title: "FAQ", path: "/faq", description: "Find answers to common questions", bgColor: "bg-[#C2FFD0]" },
     { title: null, path: "https://translate.google.com", description: "Translate", bgColor: "bg-[#C2F0FF]", icon: SiGoogletranslate },
-    { title: "About", path: "", description: "Discover additional features", bgColor: "bg-[#E8C8F1]" },
     { title: "More", path: "/more", description: "Discover additional features", bgColor: "bg-[#DACBFC]" },
     { title: "More", path: "/more", description: "Discover additional features", bgColor: "bg-[#EFFFC2]" }
   ];
@@ -44,7 +44,7 @@ const HomePage = () => {
       <h2 className="text-3xl font-semibold font-[dosis] text-white mb-12">
         "Be healthy!"
       </h2>
-            
+
       <div className="grid grid-cols-2 lg:grid-cols-2 gap-4 font-[dosis] z-10">
         {items.map((item, index) => (
           <div 
