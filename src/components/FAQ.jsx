@@ -9,7 +9,7 @@ const FAQ = () => {
   const ls = [{
     key: "kjfnwe",
     id: "task._id",
-    task: "my name is sarthak sood",
+    task: "hello world",
     setUpdateUI: "setUpdateUI",
     updateMode: "updateMode"
   }

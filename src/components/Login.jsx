@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
+import toast, { Toaster } from 'react-hot-toast';
+const notify = () => toast.error('Wrong password',{
+    duration: 2000,
+})
+const credential = () => toast(<span>email-<b>"demo"</b>, password-<b>"password"</b></span>)   
 const Login = () => {
     const [isLogin, setIsLogin] = useState(true);
     const [username, setUsername] = useState('');
@@ -14,7 +18,9 @@ const Login = () => {
         if (username === "demo" && password === "password") {
             navigate("/homepage");
         } else {
-            alert("Wrong credentials");
+            notify();
+            credential();
+
         }
     };
 
