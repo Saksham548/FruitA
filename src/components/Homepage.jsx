@@ -9,7 +9,7 @@ const HomePage = () => {
     { title: "Chat.", path: "/chat", description: "Start a conversation with our AI assistant", bgColor: "bg-[#FFE5C2]" },
     { title: "About", path: "", description: "Discover additional features", bgColor: "bg-[#E8C8F1]" },
     { title: "FAQ", path: "/faq", description: "Find answers to common questions", bgColor: "bg-[#C2FFD0]" },
-    { title: null, path: "https://translate.google.com", description: "Translate", bgColor: "bg-[#C2F0FF]", icon: SiGoogletranslate },
+    { title: null, path: "/translate", description: "Translate", bgColor: "bg-[#C2F0FF]", icon: SiGoogletranslate },
     { title: "More", path: "/more", description: "Discover additional features", bgColor: "bg-[#DACBFC]" },
     { title: "More", path: "/more", description: "Discover additional features", bgColor: "bg-[#EFFFC2]" }
   ];
