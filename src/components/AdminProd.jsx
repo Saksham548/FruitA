@@ -43,7 +43,7 @@ const AdminProd = () => {
     return (
         <div className='h-screen'>
             <div className="w-full p-3 rounded-md grid relative sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 justify-center items-center mt-1">
-                <h1 className="text-[2.4rem] font-bold absolute top-[-60px]">Products</h1>
+                <h1 className="text-[2.4rem] font-bold absolute top-[-60px]">FaQs</h1>
 
                 {/* Loading Spinner Simulation */}
                 {loading ? (

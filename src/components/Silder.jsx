@@ -19,13 +19,13 @@ const Silder = ({ children }) => {
 
                 <div className='w-[80%] mt-8 cursor-pointer'>
                     <div onClick={() => { navigate('/');setPage("Product") }} className={`w-full ${page==="Product" ? "bg-black text-white font-medium":""} rounded-md py-2 border-b-rose-50 border-b-[0.8px] flex justify-center items-center text-[1.1rem] gap-3`}>
-                        <PiProjectorScreenLight /><h1 className='self-end'>Products</h1>
+                        <PiProjectorScreenLight /><h1 className='self-end'>Faqs</h1>
                     </div>
                     <div onClick={() => { navigate('/statistics');setPage("Stats") }} className={`w-full ${page==="Stats" ? "bg-black text-white font-medium":""} rounded-md py-2 border-b-rose-50 border-b-[0.8px] flex justify-center items-center text-[1.1rem] gap-3`}>
                         <PiCurrencyCircleDollarLight /><h1 className=''>Statistics</h1>
                     </div>
                     <div onClick={() => { navigate('/stock');setPage("Stock") }} className={`w-full ${page==="Stock" ? "bg-black text-white font-medium":""} rounded-md py-2 border-b-rose-50 border-b-[0.8px] flex justify-center items-center text-[1.1rem] gap-3`}>
-                        <GoPackage /><h1 className=''>Product Stock</h1>
+                        <GoPackage /><h1 className=''>Coming Soon</h1>
                     </div>
                     
 
