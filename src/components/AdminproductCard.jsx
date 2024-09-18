@@ -23,25 +23,17 @@ const AdminproductCard = ({ setProdId, pordId, i, setLoading, deleteMod, setDele
         <>
             <div
                 onClick={() => { setEditMod(true); setProduct(i); }}
-                className="group relative border border-muted rounded-lg overflow-hidden xl:w-fit hover:scale-105 transition-all duration-500"
+                className="group h-fit relative border shadow-xl bg-gray-200 border-muted rounded-lg overflow-hidden xl:w-[500px] hover:scale-105 transition-all duration-500"
             >
-                <div>
-                    <img
-                        // src={i.image[0].url}
-                        alt='Product'
-                        width={300}
-                        height={300}
-                        className="w-full h-[300px] p-3 object-fit group-hover:opacity-80 transition-opacity"
-                    />
-                </div>
-                <div className="p-4" onClick={(e) => e.stopPropagation()}>
-                    <h3 className="font-medium text-lg">{i.name}</h3>
-                    <p className="text-muted-foreground text-sm">
-                        {trimTextToWordCount(i.description, 8)}
+                
+                <div className="p-4 text-center" onClick={(e) => e.stopPropagation()}>
+                    <h3 className="text-[1.5rem]">{i.title}</h3>
+                    <p className="text-muted-foreground text-[1.06rem] pb-4">
+                        {i.description}
                     </p>
-                    <div className="mt-2 flex items-center justify-between">
+                    {/* <div className="mt-2 flex items-center justify-between">
                         <span className="font-medium text-primary">{`$ ${i.price}`}</span>
-                    </div>
+                    </div> */}
                     <div className="flex flex-col gap-2">
                         {/* Edit Button */}
                         <button

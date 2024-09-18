@@ -9,7 +9,7 @@ const AdminRoutes = () => {
     <Slider>
       <Routes>
 
-        <Route path='/' element={<AdminProd />} />
+        <Route path='/admin' element={<AdminProd />} />
         {/* <Route path='/statistics' element={<Stats />} /> */}
         {/* <Route path='/stock' element={<Stock />} /> */}
 

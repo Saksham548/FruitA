@@ -1,30 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { HiMiniInbox } from 'react-icons/hi2';
 import AdminproductCard from './AdminproductCard';
 import { AddProd, DeleteModel } from './Models';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 const AdminProd = () => {
     // State hooks for static products and modals
-    const [products, setProducts] = useState([
-        {
-            _id: '1',
-            title: 'Product 1',
-            description: 'Description for product 1',
-            price: 100,
-        },
-        {
-            _id: '2',
-            title: 'Product 2',
-            description: 'Description for product 2',
-            price: 150,
-        },
-        {
-            _id: '3',
-            title: 'Product 3',
-            description: 'Description for product 3',
-            price: 200,
-        },
-    ]);
+    const [products, setProducts] = useState([]);
 
     const [loading, setLoading] = useState(false); // Keeping loading state to simulate loading spinner
 
@@ -41,9 +24,25 @@ const AdminProd = () => {
         setAddProMod(false);
     };
 
+    useEffect(() => {
+
+        const getAllFaqs = async () => {
+            axios.get(`https://fruit-ai-five-snowy.vercel.app/faqs`).then((req, res) => {
+                setProducts(req.data);
+            }).catch((e) => {
+                console.log(e);
+                toast.error("Server Error")
+            })
+        }
+        getAllFaqs();
+    }, [])
+
+    console.log(products);
+
+
     return (
-        <>
-            <div className="w-full p-3 rounded-md grid relative sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-10">
+        <div className='h-screen'>
+            <div className="w-full p-3 rounded-md grid relative sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 justify-center items-center mt-1">
                 <h1 className="text-[2.4rem] font-bold absolute top-[-60px]">Products</h1>
 
                 {/* Loading Spinner Simulation */}
@@ -59,7 +58,7 @@ const AdminProd = () => {
                             products.map((i, x) => (
                                 <AdminproductCard
                                     key={i._id}
-                                    pordId={pordId}
+                                    pordId={i._id}
                                     setProdId={setProdId}
                                     i={i}
                                     setLoading={setLoading}
@@ -99,9 +98,8 @@ const AdminProd = () => {
                     <style>{`body{ overflow:hidden; }`}</style>
                 </>
             )}
-        </>
+        </div>
     );
 };
 
 export default AdminProd;
- 

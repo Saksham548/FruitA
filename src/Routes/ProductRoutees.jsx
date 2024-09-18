@@ -9,11 +9,11 @@ import Translator from '../components/Translator.jsx'
 
 
 
-const ProductRoutees = ({ setSerch, serch }) => {
+const ProductRoutees = ({ admin, setAdmin }) => {
     return (
 
         <Routes>
-            <Route path='/' element={<Login />} />
+            <Route path='/' element={<Login admin={admin} setAdmin={setAdmin} />} />
             <Route path="/homepage" element={<Home />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/about" element={<About />} />

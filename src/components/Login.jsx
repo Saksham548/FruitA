@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
-const notify = () => toast.error('Wrong password',{
+const notify = () => toast.error('wrong credentials',{
     duration: 2000,
 })
-const credential = () => toast(<span>email-<b>"demo"</b>, password-<b>"password"</b></span>)   
-const Login = () => {
+const credential = () => toast(<span>email-<b>"demo"</b>, admin email-<b>"admin"</b></span>)   
+const Login = ({setAdmin,admin}) => {
     const [isLogin, setIsLogin] = useState(true);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -15,12 +15,18 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (username === "demo" && password === "password") {
-            navigate("/homepage");
-        } else {
-            notify();
+        
+        let checkString = username.toLowerCase().trim()
+        if(checkString==="admin"){
+            setAdmin(true)
+            navigate("/admin")
+        }
+        else if(checkString==="demo"){
+            navigate("/homepage")
+        }
+        else{
             credential();
-
+            notify();
         }
     };
 
